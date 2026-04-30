@@ -1,4 +1,5 @@
 use raylib::prelude::*;
+use rppal::gpio::{Gpio, InputPin};
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -347,6 +348,15 @@ fn main() {
     let mut score2: i32 = 0;
     let mut menu_tick: f32 = 0.0;
 
+    let gpio_pins: Option<(InputPin, InputPin)> = Gpio::new().ok().and_then(|gpio| {
+        let p1 = gpio.get(17).ok()?.into_input();
+        let p2 = gpio.get(27).ok()?.into_input();
+        Some((p1, p2))
+    });
+
+    let mut p1_prev = false;
+    let mut p2_prev = false;
+
     // ── Main loop ──────────────────────────────────────────────────────────────
     while !rl.window_should_close() {
 
@@ -385,12 +395,19 @@ fn main() {
             }
 
             GameState::Playing => {
-                if rl.is_key_pressed(KeyboardKey::KEY_TAB) {
+                let (p1_curr, p2_curr) = gpio_pins.as_ref()
+                    .map(|(a, b)| (a.is_high(), b.is_high()))
+                    .unwrap_or((false, false));
+
+                if rl.is_key_pressed(KeyboardKey::KEY_TAB) || (p1_curr && !p1_prev) {
                     p1.vy = settings.impulse;
                 }
-                if rl.is_key_pressed(KeyboardKey::KEY_LEFT_SHIFT) {
+                if rl.is_key_pressed(KeyboardKey::KEY_LEFT_SHIFT) || (p2_curr && !p2_prev) {
                     p2.vy = settings.impulse;
                 }
+
+                p1_prev = p1_curr;
+                p2_prev = p2_curr;
 
                 // Paddle gravity + swing decay
                 for p in [&mut p1, &mut p2] {
