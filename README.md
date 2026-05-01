@@ -1,4 +1,4 @@
-# SECTIONS 1-18 — FLAPPY PONG (Project Project / Flames)
+# FLAPPY PONG (Project Project / Flames)
 
 ---
 
