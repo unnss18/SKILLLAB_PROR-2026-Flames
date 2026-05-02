@@ -21,6 +21,8 @@
 ### 1.3 Project Title
 `"Flappy Pong: A Gravity-Based Interactive Ping Pong Game"`
 
+<img width="1600" height="1131" alt="image" src="https://github.com/user-attachments/assets/c64bfbd4-b3b7-43d9-83ad-c203a5aa11bc" />
+
 ### 1.4 One-Line Pitch
 `A gravity-driven ping pong game inspired by Flappy Bird, controlled using touch sensors on Raspberry Pi with real-time interactive gameplay.`
 
@@ -131,7 +133,7 @@ Custom paddle skin selector
 ## 6. System Design, Sketches and Visual Planning
 
 ### 6.1 Concept Architecture / Schematic
-(Diagram generated below — exported SVG into GitHub as `/assets/architecture.svg` and link it here)
+(Diagrambelow — exported SVG into GitHub as `/assets/architecture.svg`)
 
 ### 6.2 Labeled Build Sketch / Architecture / Flow Diagram / Algorithm
 (Flowchart generated below — exported SVG as `/assets/flowchart.svg`)
