@@ -171,7 +171,49 @@ The Raspberry Pi's 3.3 V pin (Pin 1) supplies both capacitive touch sensor modul
 The Raspberry Pi reads each pin every frame using `rppal::gpio::InputPin::is_high()`. Since the sensors output a clean digital HIGH when touched, no pull-up or pull-down resistors are required. The monitor connects via HDMI and the speaker via the 3.5 mm audio jack. The board is powered by a 5 V USB-C supply — no battery pack needed since the game has no motors.
 
 ### 7.3 Circuit Diagram
-![Circuit](assests/circuit.png)
+7.3 Circuit Diagram
+
+===============================
+Raspberry Pi 4 GPIO Connections
+===============================
+
+Power Connections:
+------------------
+Pin 1  (3.3V)  -------->  VCC (Sensor P1)
+Pin 1  (3.3V)  -------->  VCC (Sensor P2)
+
+Pin 6  (GND)   -------->  GND (Sensor P1)
+Pin 6  (GND)   -------->  GND (Sensor P2)
+
+NOTE:
+Both sensors share the same ground (COMMON GROUND).
+
+----------------------------------------------
+
+Input Signal Connections:
+-------------------------
+GPIO 17 (Pin 11)  ------>  SIG (Sensor P1)
+GPIO 27 (Pin 13)  ------>  SIG (Sensor P2)
+
+----------------------------------------------
+
+System Behavior:
+----------------
+• When Sensor P1 is touched:
+  GPIO 17 reads HIGH → Player 1 paddle moves upward
+
+• When Sensor P2 is touched:
+  GPIO 27 reads HIGH → Player 2 paddle moves upward
+
+• When not touched:
+  GPIO pins remain LOW
+
+----------------------------------------------
+
+Optional Outputs:
+-----------------
+HDMI Port  -------->  Monitor (Game Display)
+3.5mm Jack -------->  Speaker / Headphones (Audio Output)
 
 ### 7.4 Power Plan
 
