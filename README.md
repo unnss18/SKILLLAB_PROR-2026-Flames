@@ -443,9 +443,14 @@ Game running — active rally with ball trail visible
 Both players in action shot  
 
 ```md
-![Wiring](assets/wiring.jpg)
-![Gameplay](assets/gameplay.jpg)
-![Sensors](assets/sensors.jpg)
+### Game UI (Running on Monitor)
+![Game UI](assests/ui.png)
+
+### Circuit Connections (Breadboard + Raspberry Pi)
+![Wiring](assests/wiring.png)
+
+### Raspberry Pi GPIO Pin Configuration
+![GPIO](assests/gpio.png)
 ```
 
 ---
