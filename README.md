@@ -137,9 +137,11 @@ Custom paddle skin selector
 
 ### 6.2 Labeled Build Sketch / Architecture / Flow Diagram / Algorithm
 mainloop game
+<br>
 ![Flowchart](assests/flowchart.mainloop.png)
 <br>
-game sysytem intraction 
+game system intraction 
+<br>
 ![Flowchart](assests/flowchart.system.png)
 
 
