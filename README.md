@@ -136,7 +136,11 @@ Custom paddle skin selector
 ![Architecture](assests/architecture.png)
 
 ### 6.2 Labeled Build Sketch / Architecture / Flow Diagram / Algorithm
-![Flowchart](assests/flowchart.png)
+mainloop game
+![Flowchart](assests/flowchart.mainloop.png)
+<br>
+game sysytem intraction 
+![Flowchart](assests/flowchart.system.png)
 
 
 ### 6.3 Approximate Dimensions
