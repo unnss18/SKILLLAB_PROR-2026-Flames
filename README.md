@@ -210,10 +210,6 @@ System Behavior:
 
 ----------------------------------------------
 
-Optional Outputs:
------------------
-HDMI Port  -------->  Monitor (Game Display)
-3.5mm Jack -------->  Speaker / Headphones (Audio Output)
 
 ### 7.4 Power Plan
 
