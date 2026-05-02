@@ -138,6 +138,7 @@ Custom paddle skin selector
 ### 6.2 Labeled Build Sketch / Architecture / Flow Diagram / Algorithm
 (Flowchart generated below — exported SVG as `/assets/flowchart.svg`)
 
+
 ### 6.3 Approximate Dimensions
 
 | Dimension | Value |
