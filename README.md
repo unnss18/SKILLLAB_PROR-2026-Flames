@@ -133,10 +133,10 @@ Custom paddle skin selector
 ## 6. System Design, Sketches and Visual Planning
 
 ### 6.1 Concept Architecture / Schematic
-(Diagrambelow — exported SVG into GitHub as `/assets/architecture.svg`)
+![Architecture](assets/architecture.png)
 
 ### 6.2 Labeled Build Sketch / Architecture / Flow Diagram / Algorithm
-(Flowchart generated below — exported SVG as `/assets/flowchart.svg`)
+![Flowchart](assets/flowchart.png)
 
 
 ### 6.3 Approximate Dimensions
@@ -171,7 +171,7 @@ The Raspberry Pi's 3.3 V pin (Pin 1) supplies both capacitive touch sensor modul
 The Raspberry Pi reads each pin every frame using `rppal::gpio::InputPin::is_high()`. Since the sensors output a clean digital HIGH when touched, no pull-up or pull-down resistors are required. The monitor connects via HDMI and the speaker via the 3.5 mm audio jack. The board is powered by a 5 V USB-C supply — no battery pack needed since the game has no motors.
 
 ### 7.3 Circuit Diagram
-(Generated below — exported SVG as `/assets/circuit.svg`)
+![Circuit](assets/circuit.png)
 
 ### 7.4 Power Plan
 
